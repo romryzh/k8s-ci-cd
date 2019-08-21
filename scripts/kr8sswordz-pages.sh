@@ -7,9 +7,6 @@ BUILD_TAG=`git rev-parse --short HEAD`
 #Build the docker image
 docker build -t 127.0.0.1:30400/kr8sswordz:$BUILD_TAG -f applications/kr8sswordz-pages/Dockerfile applications/kr8sswordz-pages
 
-echo "5 second sleep to make sure the registry is ready"
-sleep 5;
-
 #Push the images
 docker push 127.0.0.1:30400/kr8sswordz:$BUILD_TAG
 
